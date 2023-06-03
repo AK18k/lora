@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "creating e2e datasets..."
+cd ./lora/examples/NLG/
 path=data/e2e
 echo "train..."
 python src/format_converting_e2e.py $path/train.txt $path/train_formatted.jsonl

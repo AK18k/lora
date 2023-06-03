@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd eval
+cd /content/lora/examples/NLG/eval
 echo "installing evaluation dependencies"
 echo "downloading e2e-metrics..."
 git clone https://github.com/tuetschek/e2e-metrics e2e
@@ -13,6 +13,6 @@ cd GenerationEval
 rm -r data/en
 rm -r data/ru
 cd ..
-mv eval.py GenerationEval/
+mv eval.py /content/lora/examples/NLG/eval/GenerationEval/
 
 echo "script complete!"

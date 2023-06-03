@@ -14,6 +14,9 @@ import random
 from torch.utils.data import DataLoader
 torch.set_printoptions(threshold=100000)
 
+sys.path.append('/content/lora/')
+sys.path.append('/content/lora/examples/NLG/src')
+
 from gpu import (
     add_gpu_params, 
     parse_gpu, 
