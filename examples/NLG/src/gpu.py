@@ -57,7 +57,8 @@ def parse_gpu(args):
     
     if args.platform == 'local':
         dist.init_process_group(backend='nccl')
-        local_rank = torch.distributed.get_rank()
+        # local_rank = torch.distributed.get_rank()
+        local_rank=int(os.environ['LOCAL_RANK'])        
         torch.cuda.set_device(local_rank)
         device = torch.device('cuda', local_rank)
         args.rank = local_rank

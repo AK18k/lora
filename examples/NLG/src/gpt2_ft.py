@@ -40,6 +40,8 @@ import loralib as lora
 
 parser = argparse.ArgumentParser(description='PyTorch GPT2 ft script')
 
+local_rank=int(os.environ['LOCAL_RANK'])
+
 add_gpu_params(parser)
 add_optimizer_params(parser)
 
